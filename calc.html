@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head><title>Euro-calculadora</title>
+<style>
+<!--
+P { text-align: justify}
+H1 { color:#674c9b; font-family:'Comic Sans MS',helvetica; font-size:18pt;}
+H2 { color:rgb(255, 0, 0); font-family:'Comic Sans MS',helvetica; font-size:16pt;}
+H3 { color:rgb(255, 128, 64); font-family:'Comic Sans MS',helvetica; font-size:14pt;}
+-->
+</style>
+<script>
+<!--
+function calcula() {
+	var x;
+	var y;
+	x = document.calc.cantidad.value;
+	y = document.calc.conv.value;
+	if (x >0){
+		var res;
+		if (y==1){
+			res = (x/1.05);
+			window.alert(x + " USD son: " + res + " Euros.");
+		}else if (y==2){
+			res = (x*1.05);
+			window.alert(x + " EUR son: " + res + " USD.");
+		} else window.alert("Debe escoger el tipo de conversion");
+		return true;
+	}
+	window.alert (" Indique una cantidad > 0 ");
+	return false;
+}
+//-->
+</script>
+</head>
+<body bgcolor="#f6f2e3" face="charter" link="#4232d9">
+<h1>Eurocalculadora</h1>
+Escriba el valor que desea convertir: <br>
+<form name="calc">
+	<h3>Cantidad: <input type="text" name="cantidad" size="20"> </h3>
+	Tipos de conversion:
+	<select name="conv" size="1" align="left" >
+	<option selected="selected" value="0">--&gt; Indique el tipo de conversion</option>
+	<option value="1"> USD --> Euros </option>
+	<option value="2"> Euros --> USD </option>
+	</select>
+</form>
+<input type="button" value=" Convertir " onClick="calcula()">
+</body>
+</html>
